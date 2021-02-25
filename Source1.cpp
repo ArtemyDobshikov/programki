@@ -1,0 +1,43 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+    cout << "Эта программа определяет коэффициент трения k тела о плоскость." << endl;
+	cout << endl;
+
+	double angle = 0.0;
+    do {
+        cout << "Угол наклона плоскости к горизонту (в градусах): " << endl;
+        cin >> angle;
+
+        if (!cin.good()) {
+			cin.clear();
+			cin.ignore(10, '\n');
+			cout << "Необходимо ввести вещественное число." << endl;
+            } else break;
+		} while (true);
+
+		 double degree = (3.14 / 180); //Коэффициент перевода градусов в радианы
+                    angle *= degree; //Перевели угол в радианы
+
+                double a = 0.0;
+
+            do {
+                cout << "Ускорение тела (м/с^2) : ";
+                cin >> a;
+
+                if (!cin.good()) {
+			cin.clear();
+			cin.ignore(10, '\n');
+			cout << "Необходимо ввести вещественное число." << endl;
+		} else break;
+	} while (true);
+
+                double g = 10;
+                double k = ((tan(angle)) - (a / (g * cos(angle))));
+            cout << "Коэффициент трения k = " << k << endl;
+
+}
