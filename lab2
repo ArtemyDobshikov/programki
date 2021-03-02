@@ -1,0 +1,46 @@
+#include <iostream>
+#include <math.h>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "Russian");
+    cout << "Эта программа решает квадратные уравнения, которые имеют общи вид ax^2+bx+c=0." << endl;
+        cout << endl;
+
+        double a;
+    cout << "Введите значение a: ";
+    cin >> a;
+        if (a == 0)
+        {
+         cout << "a=0, решения нет комплексных решений." << endl;
+        }
+    else
+{
+        double b;
+        cout << "Введите значение b: ";
+        cin >> b;
+            double c;
+            cout << "Введите значение c: ";
+            cin >> c;
+    if ((b*b - 4*a*c) > 0)
+    {
+        double x;
+        x = (( -1*b + sqrt(b*b - 4*a*c) ) / (2 * a));
+        cout << "Первый корень равен " << x << endl;
+        x = (( -1*b - sqrt(b*b - 4*a*c) ) / (2 * a));
+        cout << "Второй корень равен " << x << endl;
+    } else {
+               if ((b*b - 4*a*c) == 0)
+                {
+                double x;
+                cout << "Дискриминант равен 0, уравнение имеет 1 корень равный " << x << endl;
+                x = ((-1*b) / (2 * a));
+                } else {
+                    cout << "Дискриминант меньше 0, нет корней" << endl;
+                        }
+            }
+}
+    return 0;
+}
