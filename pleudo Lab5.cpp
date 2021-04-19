@@ -11,10 +11,10 @@ void decoder(char *s, char *s1[], int len){
     }
 int main(){
     setlocale(LC_ALL, "Russian");
-    cout << "Ёта программа кодирует предложение, основыва€сь на текст: He would remember that honesty is the best policy!" << endl;
+    cout << "This program encodes a sentence based on the text: He would remember that honesty is the best policy!" << endl;
 	cout << endl;
     int len;
-    cout << "”кажите длину строки в символах: "<<endl;
+    cout << "Specify the length of the string in characters: "<<endl;
     cin >> len;
     char *s1 = new char[len];
     for( int i=0; i<len; i++ )
