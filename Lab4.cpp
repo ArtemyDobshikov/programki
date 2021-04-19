@@ -20,8 +20,17 @@ int main()
   cout << endl;
 
   int N;
-  cout <<"Enter the ordinal number of a number from the Fibonacci sequence: ";
-  cin >> N;
+do {
+    cout << "Enter the ordinal number of a number from the Fibonacci sequence: " << endl;
+    cin >> N;
+if (!cin.good()) {
+    cin.clear();
+    cin.ignore(10, '\n');
+    cout << "You must enter a real number." << endl;
+} else {
+    break;
+        }
+} while (true);
   cout <<Fibonacci(N);
   return 0;
 }
